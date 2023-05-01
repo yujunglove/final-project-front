@@ -1,0 +1,225 @@
+
+body {
+    background-color: #F0F0F0;
+  }
+  
+  /*프로필*/
+  .mainProfil {
+    flex-direction: column;
+    width: 205px;
+    height: 300px;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(177.01deg, rgba(251, 246, 246, 0.5) -0.54%, rgba(0, 0, 0, 0) 97.52%), #4D70ED;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  
+  .circle1{
+  
+  position: absolute;
+  margin: 90px -17px 90px 190px;
+  width: 28px;
+  height: 26px;
+  background: rgba(216, 232, 153, 0.6);
+  border-radius: 100%;
+  
+  }
+  
+  /*스카이 리프트 로고*/
+  .logo1 {
+    margin-top: -10px;
+    margin-left: -16px;
+    margin-bottom: -10px;
+    width: 75px;
+    height: 50px;
+  }
+  
+  /*로그인 바*/
+  .loginLogo {
+    margin-top: -45px;
+    margin-left: 150px;
+    margin-bottom: -60px;
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 70px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color: #808080; /* 원하는 텍스트 색상으로 변경 */
+  }
+  
+  
+  .circle2{
+  
+    position: absolute;
+    margin: -0px -100px 80px 140px;
+    width: 78px;
+    height: 76px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 100%;
+    
+    }
+  
+    .circle3{
+  
+      position: absolute;
+      margin: 90px 220px 60px -100px;
+      width: 168px;
+      height: 166px;
+      background: rgba(239, 239, 239, 0.2);
+      border-radius: 100%;
+      
+      }
+  
+      /*썸네일*/
+      .nemo {
+        position: absolute;
+        padding: 50px 50px 10px 10px;
+        margin-top: 10px;
+        margin-left: 25px;
+        width: 100px; /* 수정 */
+        height: 100px; /* 수정 */
+        background: #FFFFFF;
+        border-radius: 30px;
+      }
+      
+  /*어트랙션- 000*/
+  .memberName1 {
+    margin-top: 180px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  /*010-0000-0000*/
+  .memberName2 {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  /*흰 색 메뉴*/
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 520px;
+    background-color: #ffff;
+    padding: 3px;
+    padding-top: 15px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  
+  .menu > *:not(.home) {
+    /* .home 클래스를 제외한 모든 하위 요소에 스타일을 적용 */
+    flex-grow: 1;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #696868;
+    margin: 5px;
+    border: 1.5px solid #ccc;
+    border-radius: 7px;
+    background-color: #fff;
+  }
+  
+  .menuIcon {
+    width: 30px; /* 이미지의 가로 크기 */
+    height: 30px; /* 이미지의 세로 크기 */
+  }
+  
+  .menu2 {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 80px;
+    padding: 3px;
+    background-color: #ffff;
+    text-align: left;
+  }
+  
+  /*점선*/
+  .line {
+    height: 1px; /* 선의 높이 */
+    width: 100%; /* 선의 너비 */
+    border-bottom: 2px dashed #6B88EF; /* 파란 점선 스타일의 선을 그림 */
+  }
+  
+  .circle4{
+    padding: 5px 80px;
+    width: 70px; /* 이미지의 가로 크기 */
+    height: 60px; /* 이미지의 세로 크기 */
+  }
+  
+  .first {
+    border: none;
+  
+  }
+  
+  /*장비, 리프트는 글씨가 커서 작게 변경*/
+  .manager {
+    font-size: 1.1rem;
+  }
+  
+  .nav {
+    margin: 10px 10px;
+  }
+  
+  .navImg {
+    padding-right: 9px;
+    margin-bottom: -7px;
+  }
+  
+  .home {
+    /* .home 클래스에 대한 스타일을 지정하지 않음 */
+  }
+  
+  .hr {
+    border: none;
+    border-top: 1px solid #ccc;
+   
+  }
+  
+  .container{
+    margin-top: 0%;
+    margin-left: 250px;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 2%;
+  }
+  
+  .title2 {
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: -3%;
+    padding-bottom: 2%;
+    /* 기타 스타일 */
+  }
+  
+  .navbar2 {
+    margin-left: 3%;
+    display: inline-block;
+    padding: 1.5% 3%;
+    font-size: 1.2vw;
+    /* 기타 스타일 */
+  }
+  
+  .navbar2.active::after {
+    content: "";
+    display: block;
+    height: 0.3vw;
+    background-color: #3552BB;
+    margin-top: 1.2%;
+  }
+  
+  hr {
+    width: 80%;
+    border: none;
+    height: 0.2vw;
+    background-color: #7B7A7A;
+    margin: 1%; /* 기본적인 마진값 제거 */
+  }

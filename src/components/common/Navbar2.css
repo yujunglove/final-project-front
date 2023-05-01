@@ -1,0 +1,52 @@
+
+body {
+    background-color: #F0F0F0;
+  }
+  
+  .nav {
+    margin: 10px 10px;
+  }
+  
+  .navImg {
+    padding-right: 9px;
+    margin-bottom: -7px;
+  }
+
+  .title1 {
+    position: absolute;
+    top: 40px; /* 원하는 위치로 설정 */
+    left: 280px; /* 원하는 위치로 설정 */
+  }
+  
+  
+  .title2 {
+    font-size: 1.5px;
+    text-align: center;
+    margin-top: -3%;
+    padding-bottom: 20px;
+    /* 기타 스타일 */
+  }
+  
+  .navbar2 {
+    margin-left: 3%;
+    display: inline-block;
+    padding: 1.5% 3%;
+    font-size: 1.5px;
+    /* 기타 스타일 */
+  }
+  
+  .navbar2.active::after {
+    content: "";
+    display: block;
+    height: 0.3vw;
+    background-color: #3552BB;
+    margin-top: 1.2%;
+  }
+  
+  hr {
+    width: 80%;
+    border: none;
+    height: 0.2vw;
+    background-color: #7B7A7A;
+    margin: 1%; /* 기본적인 마진값 제거 */
+  }
