@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import NavbarCSS from './Navbar.css';
+import Main from '../../Pages/Main';
 
 function Navbar() {
   const [activeMenu, setActiveMenu] = useState("");
@@ -55,7 +56,7 @@ function Navbar() {
 
     <div className="menu2">
     <div class="line"></div>
-    <NavLink to="/home">
+    <NavLink to="/">
   <img className="circle4" src="image/circle.png"></img>
   </NavLink>
     </div>
