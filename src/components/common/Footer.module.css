@@ -1,4 +1,7 @@
 .footerDiv {
     display: 'flex';
-    flex-direction: 'center'
+    flex-direction: 'center';
+    width: 100%; /* 수정 */
+    height: 50px; /* 수정 */
+    margin-top: -10px;
 }

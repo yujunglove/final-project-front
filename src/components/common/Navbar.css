@@ -176,6 +176,15 @@ body {
   .home {
     /* .home 클래스에 대한 스타일을 지정하지 않음 */
   }
+
+  .nav .nav-link {
+    color: #000;
+  }
+  
+  .nav .nav-link.active {
+    color: #3552BB;
+  }
+  
   
   .hr {
     border: none;
