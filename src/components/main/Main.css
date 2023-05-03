@@ -1,0 +1,30 @@
+
+.todo{
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 65px;
+    height: 400px;
+    width: 400px;
+    left: 300px;
+    border-radius: 10px;
+
+}
+
+.weather {
+    position: absolute;
+    top: 20px;
+    left: 300px;
+
+}
+
+
+.board{
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 65px;
+    width: 900px;
+    height: 400px;
+    left: 780px;
+    border-radius: 10px;
+
+}
