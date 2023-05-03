@@ -1,14 +1,85 @@
 
-.todo{
+.todo1{
     background:#ffff;
     position: absolute;
-    top: 65px;
+
+    top: 70px;
     height: 450px;
     width: 400px;
     left: 300px;
     border-radius: 10px;
 
 }
+
+.todoText1{
+        padding: 60px 0px 10px 40px;
+        position: absolute;
+      
+        font-family: 'Inria Sans';
+        font-style: normal;
+        font-weight: 550; /* 폰트 두께를 600으로 지정 */
+        font-size: 24px;
+        line-height: 36px;
+      
+        color: #153ABC;
+      
+}
+
+.todoText3{
+    padding: 25px 0px 10px 40px;
+    color: #545454;
+}
+
+.todoNumber1 {
+    padding: 100px 40px 10px 40px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 520; /* 폰트 두께를 600으로 지정 */
+    font-size: 24px;
+    line-height: 36px;
+  
+    color: #153ABC;
+}
+
+.todoText2{
+      padding: 25px 0px 10px 40px;
+      color: #545454;
+}
+
+.todoMinibar1{
+    padding: -10px 0px 0px 270px;
+}
+.todoMinibar2{
+
+}
+.todoMinibar3{
+
+}
+
+.todo2{
+    background:#F0F0F0;
+    position: absolute;
+    top: 175px;
+    height: 150px;
+    width: 340px;
+    left: 330px;
+    border-radius: 10px;
+
+}
+
+
+.todo3{
+    background:#F0F0F0;
+    position: absolute;
+    top: 340px;
+    height: 150px;
+    width: 340px;
+    left: 330px;
+    border-radius: 10px;
+
+
+}
+
 
 .weather {
     position: absolute;
