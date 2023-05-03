@@ -14,9 +14,9 @@ function Main() {
 
 
             <div className="edu">교육 이수</div>
-            <div className="edu">나의 식권 조회</div>
-            <div className="edu">일정 관리</div>
-            <div className="edu">Strato News</div>
+            <div className="meal">나의 식권 조회</div>
+            <div className="cal">일정 관리</div>
+            <div className="news">Strato News</div>
             </div>
         </div>
     );

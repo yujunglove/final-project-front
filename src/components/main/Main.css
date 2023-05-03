@@ -1,9 +1,9 @@
 
 .todo{
-    background: rgba(255, 255, 255, 0.6);
+    background:#ffff;
     position: absolute;
     top: 65px;
-    height: 400px;
+    height: 450px;
     width: 400px;
     left: 300px;
     border-radius: 10px;
@@ -19,12 +19,59 @@
 
 
 .board{
-    background: rgba(255, 255, 255, 0.6);
+    background:#ffff;
     position: absolute;
     top: 65px;
-    width: 900px;
-    height: 400px;
-    left: 780px;
+    width: 910px;
+    height: 450px;
+    left: 740px;
     border-radius: 10px;
 
 }
+
+
+.edu{
+    background:#ffff;
+    position: absolute;
+    top: 545px;
+    height: 400px;
+    width: 400px;
+    left: 300px;
+    border-radius: 10px;
+
+}
+
+
+.meal{
+    background:#ffff;
+    position: absolute;
+    top: 545px;
+    width: 450px;
+    height: 225px;
+    left: 740px;
+    border-radius: 10px;
+
+}
+
+.cal{
+    background:#ffff;
+    position: absolute;
+    top: 545px;
+    width: 450px;
+    height: 225px;
+    left: 1200px;
+    border-radius: 10px;
+
+}
+
+.news{
+    background:#ffff;
+    position: absolute;
+    top: 785px;
+    width: 910px;
+    height: 160px;
+    left: 740px;
+    border-radius: 10px;
+
+}
+
