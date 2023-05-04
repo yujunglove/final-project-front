@@ -12,7 +12,6 @@ function Navbar() {
     setActiveMenu(menuName);
   };
   
-
   return (
     <body>
     <div className={ NavbarCSS}>
@@ -27,8 +26,8 @@ function Navbar() {
         <div className="memberName2">000-0000-0000</div>
       </div>
       <div className="menu" style={{ marginTop: "-20px"}}>
-      <NavLink to="/myPage">
-      <div className="myPage nav"><img className="menuIcon navImg" src="image/MyPage.png"></img>마이페이지</div>
+        <NavLink to="/myPage">
+          <div className="myPage nav"><img className="menuIcon navImg" src="image/MyPage.png"></img>마이페이지</div>
         </NavLink>
         <NavLink to="/salary">
           <div className="salary nav"><img className="menuIcon navImg" src="image/salary.png"></img>급여 내역</div>
@@ -55,15 +54,13 @@ function Navbar() {
     </div>
 
     <div className="menu2">
-    <div class="line"></div>
-    <NavLink to="/">
-  <img className="circle4" src="image/circle.png"></img>
-  </NavLink>
+      <div class="line"></div>
+      <NavLink to="/">
+        <img className="circle4" src="image/circle.png"></img>
+      </NavLink>
     </div>
-
     </body>
   );
 }
-
 
 export default Navbar;

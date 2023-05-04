@@ -8,9 +8,6 @@ function SubLayout() {
     return (
         <>
             <Navbar2/>
-            <Navbar/>
-            <Outlet/>
-            <Footer/>
         </>
     );
 }
