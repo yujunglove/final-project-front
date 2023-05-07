@@ -26,7 +26,7 @@ function Navbar() {
         <div className="memberName2">000-0000-0000</div>
       </div>
       <div className="menu" style={{ marginTop: "-20px"}}>
-        <NavLink to="/myPage">
+        <NavLink to="/MyPage">
           <div className="myPage nav"><img className="menuIcon navImg" src="image/MyPage.png"></img>마이페이지</div>
         </NavLink>
         <NavLink to="/salary">

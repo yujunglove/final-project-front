@@ -1,5 +1,5 @@
 
-function Main() {
+function MyPage() {
 
   
     return (
@@ -75,4 +75,4 @@ function Main() {
     );
 }
 
-export default Main;
+export default MyPage;

@@ -10,9 +10,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route path="/" element={<Main />} />
+          <Route index element={<Main />} />
           <Route path="/myPage" element={<SubLayout />}>
-            <Route index element={<MyPage />} />
+            <Route element={<MyPage />} />
             <Route path="/myPage/myToDoList" element={<MyToDoList />} />
           </Route>
         </Route>
