@@ -6,8 +6,10 @@ import Footer from "../components/common/Footer";
 function SubLayout() {
 
     return (
-        <>
+        <>  
             <Navbar2/>
+            <Outlet/>
+        
         </>
     );
 }

@@ -4,7 +4,7 @@ function MyPage() {
   
     return (
        <div>
-            아놔 왜 안돼 ㅋㅋㅋ
+          이건 마이페이지
     </div>
     );
 }

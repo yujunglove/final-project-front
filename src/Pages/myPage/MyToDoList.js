@@ -4,7 +4,8 @@ function MyToDoList() {
   
     return (
         <>  
-            <div></div>
+            <div>방가워요</div>
+            안녕하세요!!
         </>
     );
 }
