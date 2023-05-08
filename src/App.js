@@ -11,10 +11,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index element={<Main />} />
+          
           <Route path="/myPage" element={<SubLayout />}>
             <Route element={<MyPage />} />
             <Route path="/myPage/myToDoList" element={<MyToDoList />} />
           </Route>
+
         </Route>
       </Routes>
     </BrowserRouter>
