@@ -11,7 +11,7 @@ function Main() {
                 <div class="todoText0">3</div>
                 <div class="todoNumber1">뉴뉴뉴</div>
                  </div>
-
+                <div className="All">
                 <div className="todo2" style={{ flex: 1 }}>
                 <div class="todoText2">A 구역 리프트 점검</div>
                 
@@ -21,12 +21,12 @@ function Main() {
                 </div>
 
                 <div className="todo3" style={{ flex: 1 }}>
-                <div class="todoText3">새로운 파트너 관리 교육</div>
+                <div class="todoText3">파트너 관리 교육</div>
                 <div class="todoMinibar4">완료</div>
-                <div class="todoMinibar5">리프트 안전 교육</div>
+                <div class="todoMinibar5">리프트 교육</div>
                 <div class="todoMinibar6">관리</div>
                 </div>
-               
+               </div>
 
                 <div className="board" style={{ display: "flex", flex: 1 }}>
                 <div className="notic" style={{ flex: 1 }}>공지사항</div>
