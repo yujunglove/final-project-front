@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import Main from "./Pages/Main";
-import MyPage from "./Pages/myPage/MyPage";
+import MyPage from "./Pages/MyPage";
 import SubLayout from "./layouts/SubLayout";
 import MyToDoList from "./Pages/myPage/MyToDoList";
 
