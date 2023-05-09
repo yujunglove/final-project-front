@@ -17,13 +17,11 @@ function Navbar2() {
         </div>
         <div className="navbar2-wrapper">
           <NavLink to="/myPage">
-            <div className={`navbar2 ${activeMenu === "info" ? "active" : ""}`} onClick={() => handleClick("info")}>나의 정보</div>
+            <div className={`navbar2 ${activeMenu === "myPage" ? "active" : ""}`} onClick={() => handleClick("myPage")}>나의 정보</div>
           </NavLink>
-          <NavLink to="/myPage/myToDoList">
-            <div className={`navbar2 ${activeMenu === "todo" ? "active" : ""}`} onClick={() => handleClick("todo")}>할 일</div>
+          <NavLink to="/myPage/partBoard">
+            <div className={`navbar2 ${activeMenu === "todo" ? "active" : ""}`} onClick={() => handleClick("todo")}>부서 공지사항</div>
           </NavLink>
-          <div className={`navbar2 ${activeMenu === "ticket" ? "active" : ""}`} onClick={() => handleClick("ticket")}>식권 조회</div>
-          <div className={`navbar2 ${activeMenu === "board" ? "active" : ""}`} onClick={() => handleClick("board")}>부서 게시판</div>
         </div>
         <hr />
       </div>
