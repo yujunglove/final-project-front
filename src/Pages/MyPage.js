@@ -135,9 +135,51 @@ function MyPage() {
           <div className="modal-overlay">
             <div className="modal-content">
               <button className="modal-close" onClick={closeModal}>&times;</button>
-              <h3>기본 정보 수정하기</h3>
+              <h2>기본 정보 수정하기</h2>
               <h5>수정이 안되는 정보는 인사관리자를 통해서 수정 가능합니다.</h5>
-              <p>이곳에 모달 1의 내용을 작성합니다.</p>
+                             
+                <div class="table2">
+
+                <table>
+                <tr>
+                    <th>이름</th>
+                    <td>John Doe</td>
+                    <th>성별</th>
+                    <td>남성</td>
+                </tr>
+                <tr>
+                    <th>생년월일</th>
+                    <td>1980-01-01</td>
+                    <th>급여 계좌</th>
+                    <td>1234-5678-9012</td>
+                </tr>
+                <tr>
+                    <th>휴대폰 번호</th>
+                    <td>010-1234-5678</td>
+                    <th>부서</th>
+                    <td>영업부</td>
+                </tr>
+                <tr>
+                    <th>입사년월일</th>
+                    <td>2022-01-01</td>
+                    <th>직급</th>
+                    <td>대리</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">주소</th>
+                    <td rowspan="2">서울시 강남구</td>
+                    <th>상태</th>
+                    <td>재직</td>
+                </tr>
+                <tr>
+                    <th>근속 기간</th>
+                    <td>2년</td>
+                </tr>
+                </table>
+                </div>
+                <div class="modiFianl">
+                    수정완료
+                </div>
             </div>
           </div>
         )}

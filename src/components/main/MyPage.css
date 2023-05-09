@@ -233,7 +233,7 @@ color: rgba(74, 72, 72, 0.8);
 
 .getoffworkTitle {
       position: absolute;
-      top: 40px;
+      top: 42px;
       left: 880px;
       font-size: 20px; /* Set the desired font size */
       font-weight: 500px; /* Set the desired font weight */
@@ -242,7 +242,7 @@ color: rgba(74, 72, 72, 0.8);
 
     .getoffworkImg {
       position: absolute;
-      top: 65px;
+      top: 67px;
       left: 880px;
       font-size: 20px; /* Set the desired font size */
       font-weight: 500px; /* Set the desired font weight */
@@ -294,7 +294,7 @@ color: rgba(74, 72, 72, 0.8);
 
     .goingTitle {
       position: absolute;
-      top: 40px;
+      top: 44px;
       left: 1110px;
       font-size: 20px; /* Set the desired font size */
       font-weight: 500px; /* Set the desired font weight */
@@ -303,7 +303,7 @@ color: rgba(74, 72, 72, 0.8);
 
     .goingImg {
       position: absolute;
-      top: 65px;
+      top: 72px;
       left: 1100px;
       font-size: 20px; /* Set the desired font size */
       font-weight: 500px; /* Set the desired font weight */
@@ -371,6 +371,25 @@ color: rgba(74, 72, 72, 0.8);
       font-size: 18px;
 }
 
+.modiFianl {
+      background: #E3DBEE;
+      border-radius: 20px;
+      position: absolute;
+      width: 57px;
+      height: 16px;
+      color: #411978;
+      padding: 10px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 15px;
+    
+      /* 가운데 정렬을 위한 스타일 */
+      left: 50%;
+      top: 94%;
+      transform: translate(-50%, -50%);
+    }
+    
+
 
 .info{
       display: flex;
@@ -385,13 +404,42 @@ color: rgba(74, 72, 72, 0.8);
 .table{
       padding-top: 90px;
       padding-left: 50px;
+      padding-right: 50px;
 }
 table {
       top: 300px;
       border: 2px solid rgb(183, 183, 183); /* Add border to the table */
-      width: 1250px; /* Set the width to 100% for the entire table */
+      width: 100%; /* Set the width to 100% for the entire table */
       border-radius: 10px; /* Add rounded corners to the table */
     }
+
+.table2 {
+  max-width: 900px; /* 최대 너비를 500px로 지정 */
+  max-height: 900px; /* 최대 높이를 300px로 지정 */
+  padding: 20px;
+  overflow: auto; /* 내용이 테이블 크기를 초과할 경우 스크롤 표시 */
+}
+
+th1 {
+      text-align: left;
+      background-color: #F0F0F0; /* 보라색 배경색 */
+      color: rgb(61, 61, 61); /* 흰색 텍스트 색상 */
+      writing-mode: horizontal-tb; /* 텍스트를 가로 방향으로 표시 */
+      text-orientation: mixed; /* 텍스트 방향을 혼합 방향으로 설정 */
+      padding: 15px; /* 셀 내부 여백 */
+      font-size: 18px;
+   
+      }
+  
+    td1 {
+      background-color: #ffffff; /* 보라색 배경색 */
+      color: rgb(61, 61, 61); /* 흰색 텍스트 색상 */
+      writing-mode: horizontal-tb; /* 텍스트를 가로 방향으로 표시 */
+      text-orientation: mixed; /* 텍스트 방향을 혼합 방향으로 설정 */
+      padding: 8px; /* 셀 내부 여백 */
+  
+     }
+
   
     th {
       text-align: left;
@@ -450,10 +498,12 @@ table {
       background-color: #fff;
       padding: 20px;
       border-radius: 5px;
-      max-width: 400px;
+      width: 700px; /* 모달의 최대 너비를 600px로 지정 */
+      height: 500px;
       text-align: center;
-      position: relative; /* 추가: 상대 위치 설정 */
+      position: relative;
     }
+    
     
     .modal-close {
       position: absolute; /* 추가: 절대 위치 설정 */

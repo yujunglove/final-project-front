@@ -63,23 +63,24 @@
 }
 
 .partBoard{
-    position: absolute;
-    top: 40px;
-    left: 460px;
-    width: 110px;
-    margin-right: 30px;
-    background: #E3DBEE;
-    border-radius: 20px;
-    text-align: center;
+  background:#6C77A5;
+  position: absolute;
+  top: 65px;
+  width: 460px;
+  height: 80px;
+  left: 1230px;
 
 
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 31px;
+    font-size: 24px;
+    line-height: 81px;
+    font-weight: 400;
+    text-indent: 40px; /* 텍스트를 오른쪽으로 10px 이동시킵니다 */
+    
 
-    color: #411978;
+    color: #ffff;
   
 }
 
@@ -284,14 +285,13 @@ color: #3E6039;
 }
 
 .boardMinibar2{
-    position: absolute;
-    top: 110px;
-    left: 460px;
-    width: 420px;
-    height: 300px;
-    
-    background: #F0F0F0;
-    border-radius: 10px;
+  background:#ffff;
+  position: absolute;
+  top: 65px;
+  width: 460px;
+  height: 450px;
+  left: 1230px;
+  border-radius: 10px;
 }
 
 .todo3{
@@ -317,7 +317,7 @@ color: #3E6039;
     background:#ffff;
     position: absolute;
     top: 65px;
-    width: 910px;
+    width: 460px;
     height: 450px;
     left: 740px;
     border-radius: 10px;
@@ -330,8 +330,8 @@ color: #3E6039;
     position: absolute;
     top: 545px;
     height: 400px;
-    width: 400px;
-    left: 300px;
+    width: 460px;
+    left: 1230px;
     border-radius: 10px;
 
 }
@@ -362,13 +362,22 @@ color: #3E6039;
 .news{
     background:#ffff;
     position: absolute;
-    top: 785px;
+    top: 730px;
     width: 910px;
-    height: 160px;
-    left: 740px;
+    height: 215px;
+    left: 300px;
     border-radius: 10px;
 
 }
+
+.grahp{
+  position: absolute;
+  left: 60px;
+  top: 30px;
+  width: 150px;
+}
+
+
 
 
 
@@ -383,11 +392,62 @@ color: #3E6039;
 
   }
 
-.notic2{
+  .circle10 {
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    width: 423px;
+    height: 94px;
+    
+    background: rgba(186, 183, 183, 0.2);
+    border-radius: 20px;
+
+  }
+
+  .circle11 {
+    position: absolute;
+    left: 20px;
+    top:220px;
+    width: 423px;
+    height: 94px;
+    
+    background: rgba(186, 183, 183, 0.2);
+    border-radius: 20px;
+
+  }
+
+.notic3 {
+  position: relative;
+  padding: 20px 0px 0px 35px;
+  top: 115px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.BoradImg{
+  position: absolute;
+  top: 370px;
+  left: 210px;
+
+
+opacity: 0.3;
+}
+
+.notic4 {
+  position: relative;
+  padding: 20px 0px 0px 35px;
+  top: 190px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+
+  .notic2 {
+
     padding: 20px 0px 0px 35px;
     top: 20px;
-
-}
+  }
+  
 
 .edutitle1{
     padding: 20px 0px 10px 40px;
@@ -561,5 +621,97 @@ color: #3E6039;
 .newsItem{
     padding: 80px 0px 0px 35px;
     top: 70px;
+
+}
+
+
+
+
+.cross-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.cross-line {
+  position: absolute;
+  width: 2px;
+  height: 160%;
+  background-color: rgb(175, 175, 175);
+  top: 30px;
+  left: 550px;
+  transform: translateX(-50%);
+}
+
+.cross-line::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.cross-garo {
+  position: absolute;
+  width: 590%;
+  height: 2px;
+  background-color: rgb(175, 175, 175);
+  top: 100px;
+  left: 260px;
+  transform: translateY(-50%);
+}
+
+.tj1{
+  position: absolute;
+  font-family: 'Inria Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  left: 270px;
+  top: 50px;
+  line-height: 31px;
+  color: #7c7c7c;
+
+}
+
+.tj2{
+  position: absolute;
+  font-family: 'Inria Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  left: 270px;
+  top: 140px;
+  line-height: 31px;
+  color: #7c7c7c;
+
+}
+
+.tj3{
+  position: absolute;
+  font-family: 'Inria Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  left: 600px;
+  top: 45px;
+  line-height: 31px;
+  color: #7c7c7c;
+
+}
+
+.tj4{
+  position: absolute;
+  font-family: 'Inria Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  left: 600px;
+  top: 135px;
+  line-height: 31px;
+  color: #7c7c7c;
 
 }

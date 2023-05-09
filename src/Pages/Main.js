@@ -39,15 +39,18 @@ function Main() {
                     </div>
                     </div>
 
-                <div className="partBoard" style={{ flex: 1 }}>부서게시판</div>
-                
-                <div class="boardMinibar2">
-                <div class="notic1">
-                    <div class="circle9"></div><div class="notic2">오늘 날씨가 안좋네요.</div>
-                    </div>
-                </div>
                 </div>
 
+                  
+                <div class="boardMinibar2">
+                <div class="circle10"></div><div class="notic3">오늘 날씨가 안좋네요.</div>
+                <div class="circle11"></div><div class="notic4">오늘 날씨가 안좋네요.</div>
+                <img className="BoradImg" src="image/image 434.png"/>
+                </div>
+                <div className="partBoard" style={{ flex: 1 }}>Strato News</div>
+                
+                
+                
 
             <div className="edu">
                 <div class="edutitle1">내가 해야 할 </div>
@@ -55,20 +58,19 @@ function Main() {
                 <img className="img1" src="image/image 188.png"/>
                 <div class="ing">진행중</div>
                </div>
-            <div className="meal">
-                <div class="mealtile1">나의 식권 조회</div>
-                <div class="mealcircle"></div>
-                <div class="meal2">오늘은 무슨 볶음밥을 만들까용</div>
-                </div>
-            <div className="cal">
-            <div class="caltile1">일정관리</div>
-            <div class="mealcircle"></div>
-            <div class="meal2">오늘은 어떠한 일정이 있을까용</div>  
-            </div>
+
             <div className="news">
-                <div class="newstitle">Strato News</div>
-                <div class="newscircle"></div>
-                <div class="newsItem">오늘은 어떤 뉴스가있을까용</div>
+            <div class="cross-container">
+            <div class="cross-line"></div>
+            <div class="cross-garo"></div>
+            </div>
+            <div class="tj1">결재문서</div>
+            <div class="tj2">장비수리</div>
+            <div class="tj3">기안서</div>
+            <div class="tj4">장비구매</div>
+
+
+            <img className="grahp" src="image/image 433.png"/>
                 </div>
             </div>
         </div>
