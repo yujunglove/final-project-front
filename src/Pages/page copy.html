@@ -3,92 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>휴가 신청서</title>
-  <style>
-    .calendar {
-      display: none;
-      position: absolute;
-      background-color: white;
-      border: 1px solid #ccc;
-      padding: 10px;
-      z-index: 1;
-    }
+  <title>Document UI</title>
+  
+<style>
+  .document-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
 
-    .calendar.active {
-      display: block;
-    }
+  .menu-wrapper {
+    display: flex;
+    gap: 10px;
+  }
 
-    .calendar-month {
-      margin-bottom: 20px;
-    }
+  .menu-item {
+    padding: 15px;
+    padding-right: 70px;
+    background-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
 
-    .month-name {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+  .menu-item.active {
+    background-color: #fff;
+    color: #3498db;
+  }
 
-    .calendar-days {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 5px;
-    }
+  .content {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
 
-    .calendar-day {
-      text-align: center;
-      cursor: pointer;
-    }
+  .content.active {
+    display: block;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuItems = document.querySelectorAll(".menu-item");
+    const contents = document.querySelectorAll(".content");
 
-    .calendar-day:hover {
-      background-color: lightgray;
-    }
+    menuItems.forEach(function(item, index) {
+      item.addEventListener("click", function() {
+        menuItems.forEach(function(menuItem) {
+          menuItem.classList.remove("active");
+        });
+        this.classList.add("active");
 
-    .empty-day {
-      visibility: hidden;
-    }
-  </style>
-</head>
+        contents.forEach(function(content) {
+          content.classList.remove("active");
+        });
+        contents[index].classList.add("active");
+      });
+    });
+
+    // Default: Show the first menu and content
+    menuItems[0].classList.add("active");
+    contents[0].classList.add("active");
+  });
+</script>
 <body>
-  <h1>휴가 신청서</h1>
- 
-  <div className="att">
-    <div class="attNemo1">
-        <div class="attSubNemo">
-       
-        2023-05-01 16:53</div>
-        출근하기
-        <img className="imgAtt" src="image/att1.png"/>   
+  <div class="document-container">
+    <div class="menu-wrapper">
+      <div class="menu-item active">Menu 1</div>
+      <div class="menu-item">Menu 2</div>
+      <div class="menu-item">Menu 3</div>
     </div>
-    
-
-
-    <div class="attNemo2">
-        퇴근하기
-        <img className="imgAtt" src="image/att2.png"/>   
+    <div class="content">
+      <h2>Menu 1 Content</h2>
+      <p>Here is the content for Menu 1.</p>
     </div>
-    <div class="attSubNemo1">
-        2023-05-01
-        <div class="clock">16:53</div>
+    <div class="content">
+      <h2>Menu 2 Content</h2>
+      <p>Here is the content for Menu 2.</p>
     </div>
-
-    <div class="attNemo3">
-        외출하기
-        <img className="imgAtt" src="image/att3.png"/>   
+    <div class="content">
+      <h2>Menu 3 Content</h2>
+      <p>Here is the content for Menu 3.</p>
     </div>
-    <div class="attSubNemo3">
-        2023-05-01
-        <div class="clock">16:53</div>
-    </div>
-
-    <div class="attNemo4">
-        내 급여 확인 하기
-        <img className="imgAtt" src="image/att4.png"/>   
-    </div>
-    <div class="attSubNemo4">
-        2023-05-01
-        <div class="clock">16:53</div>
-    </div>
-    </div>
-    
-</div>
+  </div>
 </body>
-</html>  
+</html>

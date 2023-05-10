@@ -1,0 +1,83 @@
+.document-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    font-size: 20px; 
+  }
+  .menu-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-left: 300px; /* 오른쪽으로 10px 이동 */
+    margin-top: -800px;
+  }
+  
+  .menu-item {
+    padding: 15px;
+    padding-right: 70px;
+    background-color: #AEBAE3;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .content {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-left: 300px;
+    width: 1200px; /* 컨텐츠의 넓이를 500px로 설정 */
+  }
+  
+  .content.active {
+    display: block;
+  }
+  
+
+  .title{
+    text-align: center;
+    padding: 20px;
+    font-size: 25px; /* Set the desired font size */
+    font-weight: 800px; /* Set the desired font weight */
+    color: #4e4e4e; /* Set the color to white */
+  }
+
+  .modi0{
+    background: #000000;
+    border-radius: 20px;
+    text-align: center;
+
+    position: absolute;
+    width: 77px;
+    height: 21px;
+
+
+    color: #ffffff;
+    top: 305px;
+    left: 1430px;
+    padding: 10px;
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.cal{
+  background: #7b91de;
+  border-radius: 10px;
+  text-align: center;
+
+  position: absolute;
+  width: 327px;
+  height: 21px;
+
+
+  color: #ffffff;
+  top: 375px;
+  left: 1180px;
+  padding: 10px;
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 18px;
+}

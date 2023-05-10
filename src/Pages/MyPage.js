@@ -116,18 +116,6 @@ function MyPage() {
                 </div>
             </div>
 
-            <div  className="vat modal-button" onClick={() => openModal(2)}>
-                휴가신청
-            </div>
-
-            <div className=" vatwo modal-button" onClick={() => openModal(3)}>
-                휴직신청
-            </div>
-
-            <div  className="fir modal-button" onClick={() => openModal(4)}>
-                퇴직신청
-            </div>
-
             <div className="modalButton">
 
       <div className="modal-button">
@@ -183,46 +171,7 @@ function MyPage() {
             </div>
           </div>
         )}
-
-        {activeModal === 2 && (
-          <div className="modal-overlay">
-            <div className="modal-content">
-              <button className="modal-close" onClick={closeModal}>&times;</button>
-              <h3>휴가 신청</h3>
-              <p>이곳에 모달 2의 내용을 작성합니다.</p>
-            </div>
-          </div>
-        )}
-{activeModal === 3 && (
-  <div className="modal-overlay">
-    <div className="modal-content1">
-      <button className="modal-close" onClick={closeModal}>&times;</button>
-      <h3>휴직 신청</h3>
-
-      <form>
-        <label htmlFor="name" style={{ marginLeft: "-120px",padding: "10px"}}>신청인 이름:</label>
-        <input type="text" id="name" name="name" required style={{ backgroundColor: "lightgray", border: "none" }} /><br /><br />
-
-        <label htmlFor="reason" style={{ marginLeft: "-280px"}}>신청사유:</label><br/>
-        <textarea id="reason" name="reason" rows="15" cols="40" required style={{ backgroundColor: "lightgray", border: "none" }}></textarea><br />
-        휴직 신청일<br></br>휴직 종료일<br></br>
-        <button type="submit" style={{ backgroundColor: "rgb(209, 146, 236)", border: "none", color: "white", padding: "10px 20px", fontSize: "16px" , margin: "40px"}}>제출</button>
-      </form>
-    </div>
-  </div>
-)}
-
-
-        {activeModal === 4 && (
-          <div className="modal-overlay">
-            <div className="modal-content">
-              <button className="modal-close" onClick={closeModal}>&times;</button>
-              <h3>퇴직 신청</h3>
-              <p>이곳에 모달 4의 내용을 작성합니다.</p>
-            </div>
-          </div>
-        )}
-      </div>
+        </div>
 </div>
             </div>
     
@@ -230,75 +179,3 @@ function MyPage() {
 }
 
 export default MyPage;
-
-// import React, { useState } from 'react';
-
-// function MyPage() {
-//   const [activeModal, setActiveModal] = useState(null);
-
-//   const openModal = (modalIndex) => {
-//     setActiveModal(modalIndex);
-//   };
-
-//   const closeModal = () => {
-//     setActiveModal(null);
-//   };
-
-//   return (
-//     <div className="my-page">
-//       {/* 이전 코드 생략 */}
-
-//       <div className="modal-button">
-//         <button className="modal-button" onClick={() => openModal(1)}>모달 1 열기</button>
-
-//         <button className="modal-button" onClick={() => openModal(2)}>모달 2 열기</button>
-
-//         <button className="modal-button" onClick={() => openModal(3)}>모달 3 열기</button>
-
-//         <button className="modal-button" onClick={() => openModal(4)}>모달 4 열기</button>
-
-//         {activeModal === 1 && (
-//           <div className="modal-overlay">
-//             <div className="modal-content">
-//               <button className="modal-close" onClick={closeModal}>&times;</button>
-//               <h3>모달 1 내용</h3>
-//               <p>이곳에 모달 1의 내용을 작성합니다.</p>
-//             </div>
-//           </div>
-//         )}
-
-//         {activeModal === 2 && (
-//           <div className="modal-overlay">
-//             <div className="modal-content">
-//               <button className="modal-close" onClick={closeModal}>&times;</button>
-//               <h3>모달 2 내용</h3>
-//               <p>이곳에 모달 2의 내용을 작성합니다.</p>
-//             </div>
-//           </div>
-//         )}
-
-//         {activeModal === 3 && (
-//           <div className="modal-overlay">
-//             <div className="modal-content">
-//               <button className="modal-close" onClick={closeModal}>&times;</button>
-//               <h3>모달 3 내용</h3>
-//               <p>이곳에 모달 3의 내용을 작성합니다.</p>
-//             </div>
-//           </div>
-//         )}
-
-//         {activeModal === 4 && (
-//           <div className="modal-overlay">
-//             <div className="modal-content">
-//               <button className="modal-close" onClick={closeModal}>&times;</button>
-//               <h3>모달 4 내용</h3>
-//               <p>이곳에 모달 4의 내용을 작성합니다.</p>
-//             </div>
-//           </div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default MyPage;
