@@ -309,6 +309,10 @@ color: #3E6039;
     position: absolute;
     top: 20px;
     left: 300px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 25px;
 
 }
 
