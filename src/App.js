@@ -3,7 +3,7 @@ import Layout from "./layouts/Layout";
 import Main from "./Pages/Main";
 import MyPage from "./Pages/MyPage";
 import SubLayout from "./layouts/SubLayout";
-import MyToDoList from "./Pages/myPage/MyToDoList";
+import Document from "./Pages/Document";
 
 function App() {
   return (
@@ -14,7 +14,8 @@ function App() {
 
           <Route path="/myPage" element={<SubLayout />}>
             <Route index element={<MyPage />} />
-            <Route path="/myPage/myToDoList" element={<MyToDoList />} />
+            <Route path="/myPage/Document" element={<Document />} />
+          
           </Route>
         </Route>
       </Routes>

@@ -19,8 +19,8 @@ function Navbar2() {
           <NavLink to="/myPage">
             <div className={`navbar2 ${activeMenu === "myPage" ? "active" : ""}`} onClick={() => handleClick("myPage")}>나의 정보</div>
           </NavLink>
-          <NavLink to="/myPage/partBoard">
-            <div className={`navbar2 ${activeMenu === "todo" ? "active" : ""}`} onClick={() => handleClick("todo")}>부서 공지사항</div>
+          <NavLink to="/myPage/Document">
+            <div className={`navbar2 ${activeMenu === "Document" ? "active" : ""}`} onClick={() => handleClick("Document")}>서류 신청</div>
           </NavLink>
         </div>
         <hr />
