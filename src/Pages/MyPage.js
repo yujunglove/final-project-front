@@ -193,16 +193,25 @@ function MyPage() {
             </div>
           </div>
         )}
+{activeModal === 3 && (
+  <div className="modal-overlay">
+    <div className="modal-content1">
+      <button className="modal-close" onClick={closeModal}>&times;</button>
+      <h3>휴직 신청</h3>
 
-        {activeModal === 3 && (
-          <div className="modal-overlay">
-            <div className="modal-content">
-              <button className="modal-close" onClick={closeModal}>&times;</button>
-              <h3>휴직 신청</h3>
-              <p>이곳에 모달 3의 내용을 작성합니다.</p>
-            </div>
-          </div>
-        )}
+      <form>
+        <label htmlFor="name" style={{ marginLeft: "-120px",padding: "10px"}}>신청인 이름:</label>
+        <input type="text" id="name" name="name" required style={{ backgroundColor: "lightgray", border: "none" }} /><br /><br />
+
+        <label htmlFor="reason" style={{ marginLeft: "-280px"}}>신청사유:</label><br/>
+        <textarea id="reason" name="reason" rows="15" cols="40" required style={{ backgroundColor: "lightgray", border: "none" }}></textarea><br />
+        휴직 신청일<br></br>휴직 종료일<br></br>
+        <button type="submit" style={{ backgroundColor: "rgb(209, 146, 236)", border: "none", color: "white", padding: "10px 20px", fontSize: "16px" , margin: "40px"}}>제출</button>
+      </form>
+    </div>
+  </div>
+)}
+
 
         {activeModal === 4 && (
           <div className="modal-overlay">

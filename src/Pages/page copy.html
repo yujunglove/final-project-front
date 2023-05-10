@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>휴가 신청서</title>
+  <style>
+    .calendar {
+      display: none;
+      position: absolute;
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      z-index: 1;
+    }
+
+    .calendar.active {
+      display: block;
+    }
+
+    .calendar-month {
+      margin-bottom: 20px;
+    }
+
+    .month-name {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .calendar-days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+    }
+
+    .calendar-day {
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .calendar-day:hover {
+      background-color: lightgray;
+    }
+
+    .empty-day {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <h1>휴가 신청서</h1>
+  
+  <form>
+    <label for="name">신청인 이름:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="start-date">휴가 시작일:</label>
+    <input type="text" id="start-date" name="start-date" required>
+    <div class="calendar"></div>
+
+    <label for="reason">신청사유:</label>
+    <textarea id="reason" name="reason" rows="5" cols="40" required></textarea>
+
+    <button type="submit">제출</button>
+  </form>
+
+  <!-- Slick 라이브러리 스크립트 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    // 휴가 시작일 입력란과 달력 요소를 선택합니다.
+    const startDateInput = document.getElementById('start-date');
+    const calendar = document.querySelector('.calendar');
+  
+    // 달력 요소를 활성화/비활성화하는 함수입니다.
+    function toggleCalendar() {
+      calendar.classList.toggle('active');
+    }
+  
+    // 휴가 시작일 입력란을 클릭했을 때 달력을 토글합니다.
+    startDateInput.addEventListener('click', toggleCalendar);
+  
+    // 휴가 시작일을 달력에서 선택한 날짜로 설정합니다.
+    function selectDate(date) {
+      startDateInput.value = date;
+      toggleCalendar();
+    }
+  
+    // 전체 달력을 생성하여 달력 요소에 추가합니다.
+    function generateCalendar() {
+      const currentDate = new Date();
+      const currentYear = currentDate.getFullYear();
+      const currentMonth = currentDate.getMonth();
+  
+      const calendarHTML = document.createElement('div');
+      calendarHTML.classList.add('calendar-months');
+  
+      for (let month = 0; month < 12; month++) {
+        const daysInMonth = new Date(currentYear, month + 1, 0).getDate();
+        const firstDay = new Date(currentYear, month, 1).getDay();
+  
+        const calendarMonth = document.createElement('div');
+        calendarMonth.classList.add('calendar-month');
+  
+        const monthName = document.createElement('div');
+        monthName.classList.add('month-name');
+        monthName.textContent = `${currentYear}년 ${month + 1}월`;
+        calendarMonth.appendChild(monthName);
+  
+        const calendarDays = document.createElement('div');
+        calendarDays.classList.add('calendar-days');
+  
+        for (let i = 0; i < firstDay; i++) {
+          const emptyDay = document.createElement('div');
+          emptyDay.classList.add('empty-day');
+          calendarDays.appendChild(emptyDay);
+        }
+  
+        for (let i = 1; i <= daysInMonth; i++) {
+          const day = document.createElement('div');
+          day.classList.add('calendar-day');
+          day.textContent = i;
+          day.addEventListener('click', function() {
+            selectDate(`${currentYear}-${month + 1}-${i}`);
+          });
+          calendarDays.appendChild(day);
+        }
+  
+        calendarMonth.appendChild(calendarDays);
+        calendarHTML.appendChild(calendarMonth);
+      }
+  
+      calendar.innerHTML = '';
+      calendar.appendChild(calendarHTML);
+    }
+  
+    generateCalendar();
+  </script>
+</body>
+</html>  

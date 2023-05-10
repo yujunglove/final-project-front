@@ -3,72 +3,20 @@
 <head>
 <style>
 
-
-table {
-    border: 2px solid rgb(183, 183, 183); /* Add border to the table */
-    width: 100%; /* Set the width to 100% for the entire table */
-    border-radius: 10px; /* Add rounded corners to the table */
-  }
-
-  th {
-    text-align: left;
-    background-color: #F0F0F0; /* 보라색 배경색 */
-    color: rgb(61, 61, 61); /* 흰색 텍스트 색상 */
-    writing-mode: horizontal-tb; /* 텍스트를 가로 방향으로 표시 */
-    text-orientation: mixed; /* 텍스트 방향을 혼합 방향으로 설정 */
-    padding: 15px; /* 셀 내부 여백 */
-    font-size: 18px;
- 
-    }
-
-  td {
-    background-color: #ffffff; /* 보라색 배경색 */
-    color: rgb(61, 61, 61); /* 흰색 텍스트 색상 */
-    writing-mode: horizontal-tb; /* 텍스트를 가로 방향으로 표시 */
-    text-orientation: mixed; /* 텍스트 방향을 혼합 방향으로 설정 */
-    padding: 8px; /* 셀 내부 여백 */
-
-   }
 </style>
 </head>
 <body>
-
-<table>
-  <tr>
-    <th>이름</th>
-    <td>John Doe</td>
-    <th>성별</th>
-    <td>남성</td>
-  </tr>
-  <tr>
-    <th>생년월일</th>
-    <td>1980-01-01</td>
-    <th>급여 계좌</th>
-    <td>1234-5678-9012</td>
-  </tr>
-  <tr>
-    <th>휴대폰 번호</th>
-    <td>010-1234-5678</td>
-    <th>부서</th>
-    <td>영업부</td>
-  </tr>
-  <tr>
-    <th>입사년월일</th>
-    <td>2022-01-01</td>
-    <th>직급</th>
-    <td>대리</td>
-  </tr>
-  <tr>
-    <th rowspan="2">주소</th>
-    <td rowspan="2">서울시 강남구</td>
-    <th>상태</th>
-    <td>재직</td>
-  </tr>
-  <tr>
-    <th>근속 기간</th>
-    <td>2년</td>
-  </tr>
-</table>
-
+    <form>
+        <label for="name">신청인 이름:</label>
+        <input type="text" id="name" name="name" required style="background-color: lightgray; border: none;"><br><br>
+      
+        <label for="reason">신청사유:</label><br>
+        <textarea id="reason" name="reason" rows="15" cols="40" required style="background-color: lightgray; border: none;"></textarea><br>
+      
+        <button type="submit" style="background-color: rgb(209, 146, 236); border: none; color: white; padding: 10px 20px; font-size: 16px;">제출</button>
+      </form>
+      
+      
+      
 </body>
 </html>
