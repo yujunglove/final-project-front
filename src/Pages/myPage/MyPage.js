@@ -1,4 +1,4 @@
-import MyPageCSS from "../components/main/MyPage.css";
+import MyPageCSS from "../../components/main/MyPage.css";
 import React, { useState } from 'react';
 
 function MyPage() {

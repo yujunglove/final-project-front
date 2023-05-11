@@ -311,7 +311,7 @@ color: #3E6039;
     left: 300px;
     font-style: normal;
     font-weight: 400;
-    font-size: 23px;
+    font-size: 20px;
     line-height: 25px;
 
 }
@@ -614,12 +614,24 @@ color: #3E6039;
 
   }
 
+  .circle12 {
+    position: absolute;
+    left: 20px;
+    top:278px;
+    width: 423px;
+    height: 74px;
+    
+    background: rgba(186, 183, 183, 0.2);
+    border-radius: 20px;
+
+  }
+
 .notic3 {
   position: relative;
   padding: 20px 0px 0px 35px;
-  top: 105px;
+  top: 75px;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .BoradImg{
@@ -634,9 +646,17 @@ opacity: 0.3;
 .notic4 {
   position: relative;
   padding: 20px 0px 0px 35px;
-  top: 150px;
+  top: 65px;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 19px;
+}
+
+.notic5{
+  position: relative;
+  padding: 20px 0px 0px 35px;
+  top: 55px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 
@@ -965,3 +985,28 @@ opacity: 0.3;
   color: #000000;
 
 }
+
+
+
+/* Main.css 파일 */
+
+.weather-text {
+  font-size: 18px;
+  color: #555;
+  animation: moveAnimation 2s linear infinite;
+}
+
+@keyframes moveAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+

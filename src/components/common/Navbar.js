@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import NavbarCSS from './Navbar.css';
-import Main from '../../Pages/Main';
+import Main from '../../pages/Main';
+import Calendar from "../../pages/calendar/Calendar";
 
 function Navbar() {
   const [activeMenu, setActiveMenu] = useState("");
@@ -17,7 +18,7 @@ function Navbar() {
     <div className={ NavbarCSS}>
       <div className="mainProfil">
         <img className="logo1" src="image/profileLogo.png"/>
-        <div className="loginLogo">로그인</div>
+        <div className="loginLogo">로그아웃</div>
         <div className="circle1"></div>
         <div className="circle2"></div>
         <div className="circle3"></div>
@@ -32,11 +33,11 @@ function Navbar() {
         <NavLink to="/salary">
           <div className="salary nav"><img className="menuIcon navImg" src="image/salary.png"></img>급여 내역</div>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="/calendar">
           <div className="home nav"><img className="menuIcon navImg" src="image/Cal.png"></img>일정</div>
         </NavLink>
-        <NavLink to="/">
-          <div className="home nav"><img className="menuIcon navImg" src="image/Board.png"></img>게시판</div>
+        <NavLink to="/notice">
+          <div className="home nav"><img className="menuIcon navImg" src="image/Board.png"></img>공지사항</div>
         </NavLink>
         <NavLink to="/">
           <div className="home nav"><img className="menuIcon navImg" src="image/Member.png"></img>직원</div>
@@ -44,7 +45,7 @@ function Navbar() {
         <NavLink to="/">
           <div className="manager nav"><img className="menuIcon navImg" src="image/Management.png"></img>장비 & 리프트 관리</div>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="/approval">
           <div className="home nav" ><img className="menuIcon navImg" src="image/Auto.png"></img>전자 결재</div>
         </NavLink>
         <NavLink to="/">

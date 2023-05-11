@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import DocumentCSS from '../components/main/Document.css';
+import DocumentCSS from '../../components/main/Document.css';
 
 function Document() {
   useEffect(() => {
