@@ -1,63 +1,147 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import MainCSS from "../components/main/Main.css";
+
 function Main() {
+  const [weatherData, setWeatherData] = useState(null);
+  const [newsData, setNewsData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  
+  useEffect(() => {
+    const fetchWeatherData = async () => {
+      const lat = 37.5665; // 위도
+      const lon = 126.9780; // 경도
+
+      try {
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=kr`);
+        setWeatherData(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    const fetchNewsData = async () => {
+      try {
+        const response = await axios.get('https://newsapi.org/v2/top-headlines', {
+          params: {
+            country: 'kr', // 검색할 국가 코드 (한국: kr)
+            category: 'sports', // 검색할 기사 카테고리 (스포츠: sports)
+            apiKey: '8e9a4d3df9d24d199a8a89fc8c0db7b6', // 자신의 NewsAPI API 키로 대체해야 함
+          },
+        });
+        setNewsData(response.data.articles);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
+    };
+
+    fetchWeatherData();
+    fetchNewsData();
+  }, []);
+
+  const Weather = () => {
+    if (!weatherData) {
+      return <div className="loading-text">날씨를 불러오는 중이에요 😚</div>;
+    }
+    const temperatureCelsius = (weatherData.main.temp - 273.15).toFixed(2); // 섭씨로 변환 후 소수점 둘째 자리까지 표시
+
     return (
-            <div className={MainCSS}>
-            <div style={{ display: "flex" }}>
-                <div className="weather" style={{ flex: 1 }}>😚 오늘의 날씨는 짜자장 ~</div> 
-                <div className="todo1" style={{ flex: 1 }}>
-                <div class="todoText1">할 일</div>
-                <div class="todoText0">3</div>
-                <div class="todoNumber1">뉴뉴뉴</div>
-                 </div>
-                <div className="All">
-                <div className="todo2" style={{ flex: 1 }}>
-                <div class="todoText2">A 구역 리프트 점검</div>
-                
-                <div class="todoMinibar1">진행중</div>
-                <div class="todoMinibar2">장치관리</div>
-                <div class="todoMinibar3">물청소</div>
-                </div>
+      <div className="weather" style={{ flex: 1 }}>
+        <div className="weather-text">
+          <span role="img" aria-label="weather-icon">🌤</span> 오늘의 날씨는 {weatherData.weather[0].description}이에요~
+          <span role="img" aria-label="temperature-icon">✨</span> 온도는 {temperatureCelsius}℃입니다.
+        </div>
+      </div>
+    );
+  };
 
-                <div className="todo3" style={{ flex: 1 }}>
-                <div class="todoText3">파트너 관리 교육</div>
-                <div class="todoMinibar4">완료</div>
-                <div class="todoMinibar5">리프트 교육</div>
-                <div class="todoMinibar6">관리</div>
-                </div>
-               </div>
+  return (
+    <div className={MainCSS}>
+      <div style={{ display: "flex" }}>
+        <Weather /> {/* Weather 컴포넌트 사용 */}
+        {/* 나머지 코드 */}
+      </div>
+      <div className="todo1" style={{ flex: 1 }}>
+        <div className="todoText1">할 일</div>
+        <div className="todoText0">3</div>
+        <div className="todoNumber1">뉴뉴뉴</div>
+      </div>
+      <div className="All">
+        <div className="todo2" style={{ flex: 1 }}>
+          <div className="todoText2">A 구역 리프트 점검</div>
+          <div className="todoMinibar1">진행중</div>
+          <div className="todoMinibar2">장치관리</div>
+          <div className="todoMinibar3">물청소</div>
+        </div>
+        <div className="todo3" style={{ flex: 1 }}>
+          <div className="todoText3">파트너 관리 교육</div>
+          <div className="todoMinibar4">완료</div>
+          <div className="todoMinibar5">리프트 교육</div>
+          <div className="todoMinibar6">관리</div>
+        </div>
+      </div>
+      <div className="board" style={{ display: "flex", flex: 1 }}>
+        <div className="notic" style={{ flex: 1 }}>공지사항</div>
+        <div className="noticNemo"></div>
+        <div className="boardMinibar1">
+          <div className="notic1">
+            <div className="circle9"></div>
+            <div className="notic2">오늘의 부서 회의가 있습니다.</div>
+          </div>
+        </div>
+      </div>
+      <div className="boardMinibar2">
+        <div className="circle10"></div>
+        <div className="notic3">
+        {loading ? (
+          <div>뉴스를 불러오는 중입니다...</div>
+        ) : newsData.length > 0 ? (
+          <ul>
+            <li>{newsData[0].title}</li>
+          </ul>
+        ) : (
+          <div>뉴스를 불러올 수 없습니다.</div>
+        )}
+        </div>
+        <div className="circle11"></div>
+        <div className="notic4">
+        {loading ? (
+          <div>뉴스를 불러오는 중입니다...</div>
+        ) : newsData.length > 0 ? (
+          <ul>
+            <li>{newsData[1].title}</li>
+          </ul>
+        ) : (
+          <div>뉴스를 불러올 수 없습니다.</div>
+        )}
 
-                <div className="board" style={{ display: "flex", flex: 1 }}>
-                <div className="notic" style={{ flex: 1 }}>공지사항</div>
-                <div className="noticNemo"></div>
+        </div>
 
-                    <div class="boardMinibar1">
+        <div className="circle12"></div>
+        <div className="notic5">
+        {loading ? (
+          <div>뉴스를 불러오는 중입니다...</div>
+        ) : newsData.length > 0 ? (
+          <ul>
+            <li>{newsData[2].title}</li>
+          </ul>
+        ) : (
+          <div>뉴스를 불러올 수 없습니다.</div>
+        )}
 
-                    <div class="notic1">
-                    <div class="circle9"></div><div class="notic2">오늘의 부서 회의가 있습니다.</div>
-                    </div>
-                    </div>
-
-                </div>
-
-                  
-                <div class="boardMinibar2">
-                <div class="circle10"></div><div class="notic3">오늘 날씨가 안좋네요.</div>
-                <div class="circle11"></div><div class="notic4">오늘 날씨가 안좋네요.</div>
-                <img className="BoradImg" src="image/image 434.png"/>
-                </div>
-                <div className="partBoard" style={{ flex: 1 }}>Strato News</div>
-                
-                <div className="att">
-
-                <div class="attNemo1">
-                <div class="dd">
-                    출근하기</div>
-                    <img className="imgAtt" src="image/att1.png"/>   
-                </div>
-                <div class="attSubNemo1">
-                    2023-05-01 16:53
+        </div>
+        <img className="BoradImg" src="image/image 434.png" alt="Board Image" />
+      </div>
+      <div className="partBoard" style={{ flex: 1 }}>Strato News</div>
+      <div className="att">
+        <div className="attNemo1">
+          <div className="dd">출근하기</div>
+          <img className="imgAtt" src="image/att1.png" alt="Attendance Image" />
+        </div>
+        <div className="attSubNemo1">
+        2023-05-01 16:53
                     
                 </div>
                 
@@ -121,8 +205,7 @@ function Main() {
         <img className="grahp" src="image/image 433.png" alt="Graph" />
       </div>
     </div>
-</div>
     );
-}
 
+  }
 export default Main;
