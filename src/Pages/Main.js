@@ -11,6 +11,7 @@ function Main() {
     const fetchWeatherData = async () => {
       const lat = 37.5665; // 위도
       const lon = 126.9780; // 경도
+      const apiKey = 'b97fbbf82b4825a7a84c60e92fa201b6'; // OpenWeatherMap API 키
 
       try {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=kr`);
