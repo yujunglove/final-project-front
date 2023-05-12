@@ -1,0 +1,24 @@
+.memberId {
+    border-radius: 5px;
+    width: 50%;
+    height: 30px;
+    margin-left: 25%;
+}
+
+.memberPassword {
+    border-radius: 5px;
+    width: 50%;
+    height: 30px;
+    margin-top: 5%;
+    margin-left: 25%;
+}
+
+.loginFormBtn {
+    background-color: #2A4091;;
+    border-radius: 20px;
+    width: 52%;
+    height: 30px;
+    color: white;
+    margin-top: 5%;
+    margin-left: 25%;
+}

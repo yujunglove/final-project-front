@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import DocumentCSS from '../../components/main/Document.css';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
 
 function Document() {
   useEffect(() => {
@@ -59,12 +61,19 @@ function Document() {
 
         <label htmlFor="reason" style={{ marginLeft: "50px", fontSize: "20px" }}>신청사유:</label><br/><br/>
 
-        <textarea id="reason" name="reason" rows="32" cols="95" required style={{ backgroundColor: "lightgray", border: "none",marginLeft: "40px" }}></textarea><br />
+        <textarea id="reason" name="reason" rows="32" cols="85" required style={{ backgroundColor: "lightgray", border: "none",marginLeft: "40px" }}></textarea><br />
       
       </form>  
       <div class="cal">
                     휴가 날짜 :
-                </div> 
+                </div>
+                <div class="docuCal">
+        <FullCalendar
+        defaultView="dayGridMonth"
+        plugins={[dayGridPlugin]}
+        height={470}
+        margin-top={400}/>
+          </div>
           </div>
 
 
@@ -81,12 +90,20 @@ function Document() {
 
         <label htmlFor="reason" style={{ marginLeft: "50px", fontSize: "20px" }}>신청사유:</label><br/><br/>
 
-        <textarea id="reason" name="reason" rows="32" cols="95" required style={{ backgroundColor: "lightgray", border: "none",marginLeft: "40px" }}></textarea><br />
+        <textarea id="reason" name="reason" rows="32" cols="85" required style={{ backgroundColor: "lightgray", border: "none",marginLeft: "40px" }}></textarea><br />
       
       </form> 
       <div class="cal">
                     휴직 날짜 :
                 </div> 
+                <div class="docuCal">
+        <FullCalendar
+        defaultView="dayGridMonth"
+        plugins={[dayGridPlugin]}
+        height={470}
+        margin-top={400}/>
+
+          </div>
           </div>
 
 
@@ -102,12 +119,20 @@ function Document() {
 
         <label htmlFor="reason" style={{ marginLeft: "50px", fontSize: "20px" }}>신청사유:</label><br/><br/>
 
-        <textarea id="reason" name="reason" rows="32" cols="95" required style={{ backgroundColor: "lightgray", border: "none",marginLeft: "40px" }}></textarea><br />
-      
+        <textarea id="reason" name="reason" rows="32" cols="85" required style={{ backgroundColor: "lightgray", border: "none",marginLeft: "40px" }}></textarea><br />
+        
       </form>   
              <div class="cal">
                     퇴직 날짜 :
                 </div>
+                <div class="docuCal">
+        <FullCalendar
+        defaultView="dayGridMonth"
+        plugins={[dayGridPlugin]}
+        height={470}
+        margin-top={400}/>
+
+          </div>
           </div>
         </div>
 

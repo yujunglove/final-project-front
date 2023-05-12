@@ -1,0 +1,43 @@
+.whiteBox {
+    width: 60vh;
+    height: 70vh;
+    background-color: white;
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 35%;
+    border-Radius: 20px;
+}
+.blueBox {
+    width: 60vh;
+    height: 20vh;
+    background-color: #2B4296;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.loginForm {
+    margin-top: 53%;
+}
+
+
+.stratoLogo {
+    width: 30%;
+    height: 42%;
+    margin-left: 23%;
+    margin-top: 2%;
+}
+
+.cloudImg {
+    width: 20%;
+    height: 50%;
+    margin-top: -10%;
+}
+
+.GroupwareImg {
+    width: 35%;
+    height: 40%;
+    margin-top: 1%;
+    margin-left: 32%;
+}

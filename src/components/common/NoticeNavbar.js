@@ -3,19 +3,12 @@ import { useState } from "react";
 import styles from './NoticeNavbar.css';
 
 function NoticeNavbar() {
-
   const navigate = useNavigate();
 
   const [activeMenu, setActiveMenu] = useState("");
-  
-  const [selectedMenu, setSelectedMenu] = useState('notice, part, status');
-
+  const [selectedMenu, setSelectedMenu] = useState('notice', 'part', 'status');
   const imgPath = 'image/manager-page-btn.png'
-
   const [turnBtn, SetTurnBtn] = useState(imgPath);
-
-
-
 
   const handleClick = (menuName) => {
     setActiveMenu(menuName);
@@ -23,17 +16,17 @@ function NoticeNavbar() {
 
   const imgPath2 = 'image/manager-page-btn-off.png'
 
-// 추가해야할 것 -> 접근제한
-// 톱니바퀴 버튼을 클릭하면 관리자페이지로 이동하는 버튼 핸들러~~
-const onClickToManage = () => {
-  SetTurnBtn(imgPath2);
-};
+  // 톱니바퀴 버튼을 클릭하면 관리자페이지로 이동하는 버튼 핸들러~~
+  const onClickToManage = () => {
+    setActiveMenu(""); // activeMenu 초기화
+    SetTurnBtn(imgPath2);
+  };
 
-// 톱니바퀴 버튼을 클릭하면 사용자페이지로 이동하는 버튼 핸들러~~
+  // 톱니바퀴 버튼을 클릭하면 사용자페이지로 이동하는 버튼 핸들러~~
   const onClickToUser = () => {
+    setActiveMenu(""); // activeMenu 초기화
     SetTurnBtn(imgPath);
   }
-
   
   return (
     <div className={styles.Navbar2}>
@@ -43,7 +36,10 @@ const onClickToManage = () => {
             <>
               {turnBtn === imgPath ? 
                 (<img className="btn" src={turnBtn} onClick={onClickToManage}/>) 
-                : (<NavLink to="/notice"><img className="btn" src={turnBtn} onClick={onClickToUser}/></NavLink>)
+                : (<NavLink to="/notice">
+                    <img className="btn" src={turnBtn} onClick={onClickToUser}/>
+                    <div className={`navbar2 ${activeMenu !== "" ? "" : null }`}></div>
+                  </NavLink>)
               }
             </>
           </NavLink>

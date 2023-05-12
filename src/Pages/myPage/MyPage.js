@@ -1,16 +1,51 @@
-import MyPageCSS from "../../components/main/MyPage.css";
-import React, { useState } from 'react';
+import MyPageCSS from '../../components/main/MyPage.css';
+import React, { useState, useEffect } from 'react';
+import { callMyPageAPI, callGoToWorkAPI, callEndWorkAPI } from '../../apis/MyPageAPICalls';
+import { useDispatch, useSelector } from 'react-redux';
+
+
+const getDate = (date) => {
+  const newDate = new Date(date);
+  const year = newDate.getFullYear();
+  const month = ("0" + (newDate.getMonth() + 1)).slice(-2);
+  const day = ("0" + newDate.getDate()).slice(-2);
+  return `${year}-${month}-${day}`
+}
 
 function MyPage() {
-    const [activeModal, setActiveModal] = useState(null);
-  
-    const openModal = (modalIndex) => {
-      setActiveModal(modalIndex);
-    };
-  
-    const closeModal = () => {
-      setActiveModal(null);
-    };
+  const dispatch = useDispatch();
+
+  //useSelector를 사용해서 화면에 데이터를 보여주기 
+  // 추가적으로 지금 여러 리듀서가 있어서 만든 리듀서만 가져오도록 한 로직
+  const {totalMemberCount, time} = useSelector(state => state.myPageReducer);
+  const [activeModal, setActiveModal] = useState(null);
+
+  useEffect(() => {
+    dispatch(callMyPageAPI())
+  }, [])
+
+  const date = new Date(time)
+  const goToWorkDate = getDate(date)
+  const goToWorkTime = `${date.getHours()}:${date.getMinutes()}`
+
+  const endWorkDate = getDate(date)
+  const endWorkTime = `${date.getHours()}:${date.getMinutes()}`
+
+  const openModal = (modalIndex) => {
+    setActiveModal(modalIndex);
+  };
+
+  const closeModal = () => {
+    setActiveModal(null);
+  };
+
+  const handleWorknClick = () => {
+    dispatch(callGoToWorkAPI({id: 5}))
+  }
+
+  const handleEndOnClick = () => {
+    dispatch(callEndWorkAPI({id: 5}))
+  }
 
 
     return (
@@ -20,7 +55,7 @@ function MyPage() {
                 Strato 직원 현황
                 </div>
                 <div class="employeeAll">
-                전체 직원 : 24명
+                전체 직원: {totalMemberCount}명
                 </div>
 
                 <div class="Explanation">
@@ -28,37 +63,43 @@ function MyPage() {
                 스카이리프트는 빠르게 직원을 검색하고 찾을 수 있습니다.
                 </div>
                 <div class="work">
-                <div class="workTitle">
+                <div class="workTitle" onClick={handleWorknClick}>
                     출근하기
                 </div>
                 <img className="workImg" src="image/image 416.png"/>
                 <div class="workNemo">
-                   <div class="workNemoTitle1">2023-05-01</div> 
-                   <div class="workNemoTitle2">16:53</div> 
+                   <div class="workNemoTitle1">{endWorkDate}</div> 
+                   <div class="workNemoTitle2">{endWorkTime}</div> 
                     
                 </div>
             </div>
 
             <div class="getoffwork">
-                <div class="getoffworkTitle">
+                <div class="getoffworkTitle" onClick={handleEndOnClick}>
                     퇴근하기
                 </div>
                 <img className="getoffworkImg" src="image/image 418.png"/>
                 <div class="getoffworkNemo">
-                   <div class="getoffworkTitle1">2023-05-01</div> 
-                   <div class="getoffworkTitle2">16:53</div> 
+                <div class="workNemoTitle1">{goToWorkDate}</div> 
+                   <div class="workNemoTitle2">{goToWorkTime}</div> 
                     
                 </div>
             </div>
 
             <div class="going">
-                <div class="goingTitle">
-                    외출하기
+                <div class="outTitle">
+                    외출  /
+                </div>
+                
+                <div class="comeTitle">
+                    복귀
                 </div>
                 <img className="goingImg" src="image/image 419.png"/>
                 <div class="goingNemo">
-                   <div class="goingTitle1">2023-05-01</div> 
-                   <div class="goingTitle2">16:53</div> 
+                   <div class="returnTitle1">2023-05-01</div> 
+                   <div class="returnTitle2">16:53<br/><br/><br/> ~</div> 
+                <div class="outTitle1">2023-05-01</div> 
+                   <div class="outTitle2">16:53</div> 
                     
                 </div>
             </div>

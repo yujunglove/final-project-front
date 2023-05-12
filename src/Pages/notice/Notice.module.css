@@ -1,8 +1,61 @@
-.contentO{
+/* CSS 파일에 @font-face 코드 삽입 */
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  /* font-weight: 400; */
+  /* font-style: normal; */
+}
+
+/* 폰트 적용할 요소에 속성 적용 */
+th{
+  background-color: transparent;
+}
+
+.content{
   position: absolute;
   top: 200px;
   left: 290px; /* Changed 'right' to 'left' */
   width: 1350px;
   height: 207px;
-  color: black;
+  font-family: 'SUITE-Regular';
 }
+
+.square {
+  background-color: white;
+  border-radius: 20px;
+  height: 700px;
+  width: 1400px;
+  /* padding-left: 20px; */
+}
+
+.noticeTitle{
+  font-size: large;
+  margin-top: 0%;
+}
+
+.tableInfo{
+  margin-top: 0px;
+  margin-left: 150px;
+  padding-top: 30px;
+
+
+}
+
+.noticeMainTable{
+  /* position: absolute; */
+  border-style: solid none solid none;
+  border-width: thick;
+  border-radius: 0%;
+  top: 100px;
+  max-height: 10px;
+  width:  1100px;
+  margin-left: 150px;
+}
+
+.noticeMainTable th {
+  text-align: center;
+  border-style: none none solid none;
+  border-width: 1px;
+}
+
+

@@ -628,10 +628,11 @@ color: #3E6039;
 
 .notic3 {
   position: relative;
-  padding: 20px 0px 0px 35px;
+  padding: 20px 0px 0px 17px;
   top: 75px;
   font-weight: 400;
   font-size: 18px;
+  color: #373737;
 }
 
 .BoradImg{
@@ -645,18 +646,21 @@ opacity: 0.3;
 
 .notic4 {
   position: relative;
-  padding: 20px 0px 0px 35px;
+  padding: 20px 0px 0px 9.5px;
   top: 65px;
   font-weight: 400;
   font-size: 19px;
+  color: #373737;
+  
 }
 
 .notic5{
   position: relative;
-  padding: 20px 0px 0px 35px;
+  padding: 20px 0px 0px 11px;
   top: 55px;
   font-weight: 400;
   font-size: 18px;
+  color: #373737;
 }
 
 

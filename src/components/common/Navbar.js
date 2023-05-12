@@ -39,10 +39,10 @@ function Navbar() {
         <NavLink to="/notice">
           <div className="home nav"><img className="menuIcon navImg" src="image/Board.png"></img>공지사항</div>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="/member">
           <div className="home nav"><img className="menuIcon navImg" src="image/Member.png"></img>직원</div>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="/equipment">
           <div className="manager nav"><img className="menuIcon navImg" src="image/Management.png"></img>장비 & 리프트 관리</div>
         </NavLink>
         <NavLink to="/approval">

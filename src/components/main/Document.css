@@ -26,6 +26,7 @@
     background-color: #f9f9f9;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin-left: 300px;
+    height: 720px;
     width: 1200px; /* 컨텐츠의 넓이를 500px로 설정 */
   }
   
@@ -53,8 +54,8 @@
 
 
     color: #ffffff;
-    top: 305px;
-    left: 1430px;
+    top: 905px;
+    left: 870px;
     padding: 10px;
     text-align: center;
 
@@ -73,11 +74,18 @@
 
 
   color: #ffffff;
-  top: 375px;
-  left: 1180px;
+  top: 335px;
+  left: 1150px;
   padding: 10px;
   text-align: center;
 
   font-weight: 400;
   font-size: 18px;
+}
+
+.docuCal{
+  width: 400px;
+  margin-top: -480px;
+  margin-left: 780px;
+  font-size: 12px;
 }
